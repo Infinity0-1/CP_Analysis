@@ -1,0 +1,4 @@
+Chapters/*.pdf
+*.pdf
+./.gitignore
+Directed\ Work
