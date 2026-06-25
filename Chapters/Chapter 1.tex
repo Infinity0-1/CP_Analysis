@@ -1,64 +1,5 @@
-\documentclass[12pt]{article}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{amsmath, amssymb, amsthm}
-\usepackage{siunitx}
-\usepackage{tikz}
-\usepackage{pgfplots}
-\usepackage{geometry}
-\usepackage{titlesec}
-\geometry{a4paper, margin=1in}
-
-\pgfplotsset{compat=1.18}
-\usetikzlibrary{3d, arrows.meta}
-
-% Theorem environments
-\newtheorem{definition}{Definition}
-\newtheorem{proposition}{Proposition}
-\newtheorem{remark}{Remark}
-\newtheorem{example}{Example}
-\newtheorem{theorem}{Theorem}
-
-% Paragraph formatting
-\setlength{\parindent}{1.5em}
-\setlength{\parskip}{1em}
-
-% Add extra vertical space
-\titleformat{\section}{\normalfont\Large\bfseries}{\thesection}{1em}{}
-\titlespacing*{\section}{0pt}{2ex plus 1ex minus .2ex}{1ex plus .2ex}
-
-\title{Chapter 01: Double integrals }
-\author{Notes from prof zeghlaoui course}
-
-\hbadness=10000
-\hfuzz=\maxdimen
-
-\newcommand{\N}{\mathbb{N}}
-\newcommand{\R}{\mathbb{R}}
-\newcommand{\Z}{\mathbb{Z}}
-\newcommand{\Q}{\mathbb{Q}}
-\newcommand{\C}{\mathbb{C}}
-\newcommand{\E}{\mathbb{E}}
-\newcommand{\F}{\mathbb{F}}
-
-% --- Derivatives ---
-\newcommand{\pd}[2]{\dfrac{\partial #1}{\partial #2}}
-\newcommand{\pdd}[3]{\dfrac{\partial^2 #1}{\partial #2\,\partial #3}}
-\newcommand{\pddx}[2]{\dfrac{\partial^2 #1}{\partial #2^2}}
-\newcommand{\dd}[2]{\dfrac{\mathrm{d} #1}{\mathrm{d} #2}}
-\newcommand{\ddd}[2]{\dfrac{\mathrm{d}^2 #1}{\mathrm{d} #2^2}}
-\newcommand{\diff}{\,\mathrm{d}}
-
-%% vertical vector macro
-\newcommand{\vect}[1]{\begin{pmatrix}#1\end{pmatrix}}
-
-
-\begin{document}
-
-\maketitle
-
 \vspace{2em}
-\section{Reminder:}
+\subsection{Reminder:}
 Recall that if $f: \left[a,b\right] \to \R$ is bounded.
 
 for any subdivision $\sigma = \{ x_0=a <x_1< x_2<...< x_{n+1} = b\}$ of  $\left[a,b\right]$
@@ -117,8 +58,8 @@ $(\sigma_n)[a,b]\quad \zeta_n = (\zeta_n^i),\ \zeta_n^i \in [x_{i-1}^n, x_i^n]$
 \[\lim\limits_{n \to \infty} \frac{b-a}{n} \sum_{i = 1}^{n}f(a+ \frac{i}{n}(b-a)) = \int_a^bf(x)dx \quad, x_i^n-x^n_{i-1} = \frac{b-a}{n}\]
 \end{definition}
 
-\section{Double integrals:}
-\subsection{Definition and first properties:}
+\subsection{Double integrals:}
+\subsubsection{Definition and first properties:}
 
 \begin{definition}
   Darboux sums- $\quad $ Riemann sums:
@@ -149,7 +90,7 @@ $(\sigma_n)[a,b]\quad \zeta_n = (\zeta_n^i),\ \zeta_n^i \in [x_{i-1}^n, x_i^n]$
 
 \end{definition}
 
-\subsection{Example:}
+\subsubsection{Example:}
 
 \[ f(x,y) = \alpha \quad; \forall(x,y) \in \Delta\]
 \[M_{ij} = m_{ij} = f(\zeta_i^1, \zeta_j^2) = \alpha\]
@@ -173,7 +114,7 @@ and we denote the common value by $\iint_{\Delta}f(x,y)dxdy$
 
 \end{definition}
 
-\subsection{Example:}
+\subsubsection{Example:}
 \[f(x,y) = x^2 + y^2 \quad,\Delta = \left[0,1\right]^2= \left[0,1\right]\times\left[0,1\right]\]
 
 
@@ -197,7 +138,7 @@ and we denote the common value by $\iint_{\Delta}f(x,y)dxdy$
 \textbf{Remark:}
 Any continuous function is Riemann integrable.
 
-\subsection{Properties:}
+\subsubsection{Properties:}
 
 1)\underline{Linearity:}
 If $f,g: D \to \R$ are Riemann integrable then:
@@ -228,7 +169,7 @@ If $D = D_1 \cup D_2$ such that $D_1 \cap D_2$ is at most a curve then:
 
 If  $f \equiv C \quad$, the average of $f$ is $C$
 
-\subsection{Example:}
+\subsubsection{Example:}
 
 $D$: the triangle with vertices $(0,0),(1,0),(0,1)$
 (graph) 
@@ -276,10 +217,10 @@ $\forall x,y \in \left[0,1\right] \times \left[0,1\right]$
   then: $\iint_D f(x,y)dxdy = \int_c^d \left[\int_{h_1(y)}^{h_2(y)}f(x,y)dx\right]dy$
 \end{theorem}
 
-\subsection{Remark:}
+\subsubsection{Remark:}
 We can use the Chasles's formula to apply this theorem.
 
-\subsection{Example 01:}
+\subsubsection{Example 01:}
 \textbf{Problem:} Show that a disk of radius $R$ centered at the origin has area $\pi R^2$.
  
 \textbf{Setup Using Cartesian Coordinates (Quick Version):}
@@ -338,7 +279,7 @@ Therefore:
  
 \textbf{Intuition (Polar Method):} In polar coordinates, we're summing up infinitesimal rings. Each ring at radius $r$ has circumference $2\pi r$ and thickness $dr$, so its area is $2\pi r \, dr$. Integrating from $r=0$ to $r=R$ gives the total area. The factor $r$ in the Jacobian $r \, dr \, d\theta$ accounts for the fact that rings farther from the origin have larger circumference.
  
-\subsection{Example 02:}
+\subsubsection{Example 02:}
 (trapezoid area proof)
 \textbf{Problem:} Prove that the area of a trapezoid with parallel sides of length $A$ and $B$ and height $h$ is $\frac{(A+B)h}{2}$.
  
@@ -396,7 +337,7 @@ A(D) &= \int_0^h \left[\int_{\frac{a}{h}y}^{\frac{a+B-A}{h}y + A} dx\right] dy \
 
 
 
-\subsection{Example 03:}
+\subsubsection{Example 03:}
 
 \textbf{Problem:} Compute $\displaystyle \iint_D xy \, dxdy$ where $D$ is the triangular region in the first quadrant bounded by $x + y = 1$.
  
@@ -471,7 +412,7 @@ x(1-x)^2 &= x(1 - 2x + x^2) \\
  
 
 
-\subsection{Example 04:}
+\subsubsection{Example 04:}
 Let us compute volume of $\Omega$ bounded above by the paraboloid $z = 1 - x^2 -y^2$ and below by the plane $z = 1-y$
 
 Compute the volume of the solid $\Omega$ bounded above by the paraboloid $z = 1 - x^2 - y^2$ and below by the plane $z = 1 - y$.
@@ -614,6 +555,3 @@ V &= \frac{1}{12} \cdot \frac{3\pi}{8} \\
 \end{align*}
  
 \boxed{V = \frac{\pi}{32}}
-
-\end{document}
-

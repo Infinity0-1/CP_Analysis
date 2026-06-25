@@ -1,15 +1,18 @@
 \documentclass[11pt, a4paper]{article}
 
-\usepackage{lmodern, amsmath, amssymb, amsthm, mathtools, mathrsfs, enumitem, hyperref, cleveref, geometry, microtype, suffix, graphicx, float, caption, subcaption, booktabs, multirow, siunitx, setspace, fancyhdr, cite, tikz, pgfplots}
+\usepackage{lmodern, amsmath, amssymb, amsthm, mathtools, mathrsfs, enumitem, hyperref, cleveref, geometry, microtype, suffix, graphicx, float, caption, subcaption, booktabs, multirow, siunitx, setspace, fancyhdr, cite, tikz, pgfplots, titlesec}
 \usepackage[most]{tcolorbox}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 
-\theoremstyle{definition}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{3d, arrows.meta}
+
 \newtheorem{definition}{Definition}
-\newtheorem{theorem}{Theorem}
-\newtheorem{ex}{Example}
 \newtheorem{proposition}{Proposition}
+\newtheorem{remark}{Remark}
+\newtheorem{example}{Example}
+\newtheorem{theorem}{Theorem}
 \newtcolorbox{boxdef}{enhanced}
 \newtcolorbox{boxthem}{enhanced}
 \newtcolorbox{boxprop}{enhanced}
@@ -18,8 +21,9 @@
 \geometry{margin=1.7cm}
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[L]{$\mathfrak{Analysis}$ $\mathfrak{in}$ $\mathfrak{Mathematics}$}
-\fancyhead[R]{$\mathfrak{in}$ $\mathfrak{Mathematics}$}
+\fancyhead[L]{$\mathfrak{Analysis}$}
+\fancyhead[C]{$\mathfrak{\&}$}
+\fancyhead[R]{$\mathfrak{Mathematics}$}
 \fancyfoot[C]{\thepage}
 \renewcommand{\headrulewidth}{0.3pt}
 \renewcommand{\footrulewidth}{0pt}
@@ -29,6 +33,15 @@
 \newcommand{\Z}{\mathbb{Z}}
 \newcommand{\Q}{\mathbb{Q}}
 \newcommand{\C}{\mathbb{C}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\pd}[2]{\dfrac{\partial #1}{\partial #2}}
+\newcommand{\pdd}[3]{\dfrac{\partial^2 #1}{\partial #2\,\partial #3}}
+\newcommand{\pddx}[2]{\dfrac{\partial^2 #1}{\partial #2^2}}
+\newcommand{\dd}[2]{\dfrac{\mathrm{d} #1}{\mathrm{d} #2}}
+\newcommand{\ddd}[2]{\dfrac{\mathrm{d}^2 #1}{\mathrm{d} #2^2}}
+\newcommand{\diff}{\,\mathrm{d}}
+\newcommand{\vect}[1]{\begin{pmatrix}#1\end{pmatrix}}
 \newcommand{\abs}[1]{\lvert#1\rvert}
 \newcommand{\set}[1]{\{#1\}}
 \newcommand{\suchthat}{\;:\;}
@@ -48,7 +61,7 @@
 \end{center}
 
 \section{Integrals}
-% \input{Chapters/Chapter 1.tex}
+\input{Chapters/Chapter 1.tex}
 \newpage
 \input{Chapters/Series 1.tex}
 

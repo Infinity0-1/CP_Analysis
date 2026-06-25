@@ -1,4 +1,9 @@
-Chapters/*.pdf
-*.pdf
 ./.gitignore
-Directed\ Work
+Directed\ Work/*
+*.pdf
+Chapters/*.pdf
+Chapters/*.fdb_latexmk
+Chapters/*.synctex.gz
+Chapters/*.log
+Chapters/*.fls
+Chapters/*.aux
