@@ -1,4 +1,4 @@
-./.gitignore
+.gitignore
 Directed\ Work/*
 *.pdf
 Chapters/*.pdf
