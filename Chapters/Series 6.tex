@@ -1,4 +1,65 @@
 \subsection{Exercises Series 6}
 \vspace*{0.2cm}
 \noindent\Large{\underline{\textbf{Exercise 1}}}
-\normalsize{}
+\normalsize{}\\
+\noindent Determine the Fourier series of the $2\pi$-periodic function $f$ defined on $]-\pi,\pi]$ by:
+$$f : x \longmapsto e^x, \qquad \qquad \qquad \qquad f : x \longmapsto |\sin x|.$$
+
+\noindent\Large{\underline{\textbf{Exercise 2}}}
+\normalsize{}\\
+\noindent Let $\alpha, \beta,$ and $\gamma$ be real numbers. 
+We denote by $f$ the even and $2\pi$-periodic function defined on $[0, \pi]$ by:
+$$f : x \longmapsto \alpha x^2 + \beta x + \gamma.$$
+\begin{enumerate}
+    \item Is $f$ developable in Fourier series?
+          In which case, does the series converge uniformly on $\R$?
+    \item Show that we can determine $\alpha, \beta,$ and $\gamma$ so that the Fourier series of $f$ reduces to
+            $\displaystyle\sum_{n \in \mathbb{N}^*} \dfrac{\cos nx}{n^2}$.
+    \item Deduct the sum $\displaystyle\sum_{n=1}^{+\infty} \dfrac{1}{n^2}$.\\
+\end{enumerate}
+
+\noindent\Large{\underline{\textbf{Exercise 3}}}
+\normalsize{}\\
+\noindent Let $f$ the $2\pi$-periodic function defined by $f(x) = x$, for any $-\pi < x \leq \pi$. 
+\begin{enumerate}
+    \item Determine the Fourier series of $f$.
+    \item Deduce the following sums
+    $$A = \sum_{n=0}^{+\infty} \dfrac{(-1)^n}{2n+1} \qquad \text{and} \qquad B = \sum_{n=1}^{+\infty} \dfrac{1}{n^2}.$$
+\end{enumerate}
+
+\noindent\Large{\underline{\textbf{Exercise 4}}}
+\normalsize{}\\
+\noindent Let $f$ the $2\pi$-periodic function defined by
+    $$f : x \longmapsto 
+    \begin{cases} 
+        \cos x, & \text{if} \quad 
+        -\dfrac{\pi}{2} \leq x \leq \dfrac{\pi}{2} \\[6pt] 0, & \text{if} \quad 
+        \dfrac{\pi}{2} \leq x \leq \dfrac{3\pi}{2} 
+    \end{cases}$$
+\begin{enumerate}
+    \item Draw the graph of the restriction of $f$ to the interval $\left[-\dfrac{3\pi}{2}, \dfrac{3\pi}{2}\right]$.
+    \item Calculate the sum $\displaystyle\sum_{n=0}^{+\infty} \dfrac{(-1)^n}{4n^2 - 1}$.\\
+\end{enumerate}
+
+\noindent\Large{\underline{\textbf{Exercise 5}}}
+\normalsize{}\\
+\noindent Form the Fourier series of the following $2\pi$-periodic functions and deduce for each the indicated sums:
+\begin{enumerate}
+    \item The even function defined on $[0, \pi[$ by $f(x) = 1 - \dfrac{2x}{\pi}$ and 
+    $\displaystyle\sum_{n=0}^{+\infty} \dfrac{1}{(2n+1)^2}$, 
+    $\displaystyle\sum_{n=0}^{+\infty} \dfrac{1}{(2n+1)^4}$, and 
+    $\displaystyle\sum_{n=1}^{+\infty} \dfrac{1}{n^4}$.
+    \item The function defined on $[-\pi, \pi]$ by $f(x) = \cosh(\alpha x)$ $(\alpha > 0)$ and 
+    $\displaystyle\sum_{n=0}^{+\infty} \dfrac{1}{n^2 + \alpha^2}$ and 
+    $\displaystyle\sum_{n=0}^{+\infty} \dfrac{(-1)^n}{n^2 + \alpha^2}$.\\
+\end{enumerate}
+
+\noindent\Large{\underline{\textbf{Exercise 6}}}
+\normalsize{}\\
+\noindent Let the function $f : x \longmapsto \displaystyle\sum_{n=1}^{+\infty} \dfrac{\sin nx}{\sqrt{n}}$.
+\begin{enumerate}
+    \item Show that the function $f$ is well defined on $\R$, $2\pi$-periodic and continuous on 
+          $\R - 2\pi\Z$.
+    \item Deduce, using Parseval's equality, that $\displaystyle\sum_{n \in \N^*} \dfrac{\sin nx}{\sqrt{n}}$ 
+          is not the Fourier series of a Riemann integrable $2\pi$-periodic function.
+\end{enumerate}
