@@ -1,0 +1,69 @@
+\subsection{Exercises Series 7}
+\vspace*{0.2cm}
+\noindent\Large{\underline{\textbf{Exercise 1}}}
+\normalsize{}\\
+\begin{enumerate}
+    \item Proof that if $\displaystyle f\in\mathcal{L}^1(\mathbb{R})$ and 
+          $\displaystyle\int_{\mathbb{R}} |tf(t)|\, dt$ converges then $\mathcal{F}f$ is derivable. Furthermore,
+          $$(\mathcal{F}f)'(x) = -i\mathcal{F}(t \longmapsto tf(t))(x),\ \ \forall x\in\R.$$
+    \item Let $\displaystyle\Gamma : t \longmapsto e^{-\frac{t^2}{2}}$. Compute $\mathcal{F}(\Gamma)$.
+    \item Let $s > 0$. We consider the function $\displaystyle\Gamma_s : t \longmapsto 
+          \dfrac{1}{\sqrt{s}}\, e^{-\frac{t^2}{2s}}.$\\
+        \noindent$i)$ Show that $\displaystyle\mathcal{F}(\Gamma_s) = \dfrac{1}{\sqrt{s}}\,\Gamma_{\frac{1}{s}}.$\\
+        \noindent$ii)$ Deduce that $\displaystyle\mathcal{F}^2(\Gamma_s) := \mathcal{F}(\mathcal{F}(\Gamma_s))$.\\
+        \noindent$iii)$ Let $f\in\mathcal{L}^1(\R,\R)$. Using $\displaystyle\int_{\R}f\mathcal{F}(g)=\int_{\R}g\mathcal{F}(f)$ 
+                 and the time shift property,\\ 
+                 \indent\quad establish a relationship between $\displaystyle\mathcal{F}^2(f*\Gamma_s)$ and $f*\Gamma_s$.
+    \item For any $n\in\mathbb{N}^*$, we define $\gamma_n := \Gamma_{\frac{1}{2n}}$.\\
+          $i)$ Show that the sequence $(\gamma_n)_{n \in \mathbb{N}^*}$ is an approximation of unity.\\
+             \indent\quad (That is:$\displaystyle\ \forall n\in\N^*,\ \int_{\R} \gamma_n = 1$ and $\forall\varepsilon > 0$, 
+             $\displaystyle\ \lim_{n\to\infty} \int_{\mathbb{R} - ]-\varepsilon,\varepsilon[} \gamma_n = 0$).\\
+          $ii)$ Using the fact that for any $f\in\mathcal{L}^1(\R, \R)$ the sequence $(f * \gamma_n)_{n \in \N^*}$ 
+          converges to $f$ in $\mathcal{L}^1(\R, \R)$, deduce (using the Riesz-Fischer theorem) the Fourier inversion formula
+          for a continuous function on $\mathcal{L}^1(\mathbb{R}, \mathbb{R})$ whose Fourier transform is also in 
+          $\mathcal{L}^1(\R, \R)$.\\
+\end{enumerate}
+
+\noindent\Large{\underline{\textbf{Exercise 2}}}
+\normalsize{}\\
+\noindent Let $\Pi$ the function defined by
+$$\Pi(t) = \begin{cases} 1 & \text{if} \quad 2|t| \leq 1 \\ 0 & \text{if} \quad 2|t| > 1 \end{cases}$$
+\begin{enumerate}
+    \item Compute the Fourier transform of $\Pi$.
+    \item Using the properties of Fourier transform, calculate the Fourier transform of the following functions:
+        $$i)\quad t \longmapsto \Pi\!\left(\dfrac{t-1}{2}\right), \qquad ii)\quad t \longmapsto t\ \Pi(t), \qquad 
+            iii)\quad t \longmapsto t^2\ \Pi(t).$$
+\end{enumerate}
+
+\noindent\Large{\underline{\textbf{Exercise 3}}}
+\normalsize{}\\
+\noindent We consider the function
+$$f(t) = \begin{cases} 1 - |t| & \text{if} \quad |t| \leq 1 \\ 0 & \text{if} \quad |t| > 1 \end{cases}$$
+\begin{enumerate}
+    \item Proof that $f \in \mathcal{L}^1(\R, \R)$ and compute $\mathcal{F}f$.
+    \item Apply the Fourier inversion formula to $f$ at any point in $\R_+$.
+    \item Deduce the value of the integral 
+            $\displaystyle\int_0^{+\infty} \dfrac{1 - \cos x}{x^2}\cos(\alpha x)\, dx$, $\alpha\in\R_+$.\\
+    \item Give the value $\displaystyle\int_0^{+\infty} \dfrac{\sin^2 x}{x^2}\, dx.$
+\end{enumerate}
+\newpage
+\vspace*{0.2cm}
+\noindent\Large{\underline{\textbf{Exercise 4}}}
+\normalsize{}\\
+\noindent For $\alpha > 0$, we put $$f_\alpha : t \longmapsto e^{-\alpha|t|}.$$
+\begin{enumerate}
+    \item Compute the Fourier transform of $f_\alpha$.
+    \item Using the Fourier inversion formula, calculate the value of
+          $$\int_0^\infty \dfrac{\cos(xt)}{x^2 + \alpha^2}\ dx, \qquad \text{ for any } t\in\R.$$
+    \item Find $a$ and $b$ such that
+          $$ \dfrac{1}{\left(x^2 + 1\right)\left(x^2 + 4\right)} = \dfrac{a}{x^2+1} + \dfrac{b}{x^2+4}, \qquad 
+          \text{for any } x \in \R.$$
+    \item Solve the differential equation
+          $$-y'' + y = f_2,$$
+          where $y,\, y',\, y''$ and $y$ is derivable on $\R$.\\
+\end{enumerate}
+
+\noindent\Large{\underline{\textbf{Exercise 5}}}
+\normalsize{}\\
+\noindent Let $\beta > 1$, solve in $\mathcal{C}^1(\R) \cap \mathcal{L}^1(\R)$ the following integral equation:
+$$\int_{-\infty}^{+\infty} y(u)\, e^{-\beta(t-u)^2}\, du = e^{-t^2}, \qquad \text{for any } t \in \R.$$
